@@ -1,7 +1,7 @@
 # Maintainer: Master Kim <your-email@example.com>
 pkgname=kimsystemai
 _pkgname=kimsystemai
-pkgver=0.1.0.r0
+pkgver=0.1.0.r13.g66b40e5
 pkgrel=1
 pkgdesc="KimSystem AI CLI: A specialized expert in Arch Linux and Hyprland"
 arch=('any')
