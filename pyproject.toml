@@ -19,7 +19,6 @@ classifiers = [
 dependencies = [
     "google-genai",
     "python-dotenv",
-    "requests",
 ]
 
 [project.urls]
