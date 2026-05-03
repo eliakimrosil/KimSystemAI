@@ -1,0 +1,6 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if [ -d "$DIR/venv" ]; then
+    source "$DIR/venv/bin/activate"
+fi
+python "$DIR/kim_cli.py" "$@"

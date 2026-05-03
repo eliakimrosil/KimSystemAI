@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kimsystemai"
+version = "0.1.0"
+authors = [
+  { name="Master Kim", email="your-email@example.com" },
+]
+description = "KimSystem AI CLI: A specialized expert in Arch Linux and Hyprland"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+    "google-genai",
+    "python-dotenv",
+    "requests",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/your-username/KimSystemAI"
+"Bug Tracker" = "https://github.com/your-username/KimSystemAI/issues"
+
+[project.scripts]
+kim = "kimsystemai.__main__:main"
