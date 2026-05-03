@@ -1,7 +1,7 @@
 # Maintainer: Master Kim <your-email@example.com>
 pkgname=kimsystemai-git
 _pkgname=kimsystemai
-pkgver=0.1.0.r0
+pkgver=0.1.0.r5.ge50c8ce
 pkgrel=1
 pkgdesc="KimSystem AI CLI: A specialized expert in Arch Linux and Hyprland"
 arch=('any')
@@ -23,12 +23,12 @@ pkgver() {
 }
 
 build() {
-  cd "$_pkgname"
+  cd "$srcdir/$_pkgname"
   python -m build --wheel --no-isolation
 }
 
 package() {
-  cd "$_pkgname"
+  cd "$srcdir/$_pkgname"
   python -m installer --destdir="$pkgdir" dist/*.whl
   
   # Install the .env.example as a reference
