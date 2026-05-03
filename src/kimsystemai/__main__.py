@@ -267,7 +267,7 @@ def main():
         process_chat(args.session, prompt, yolo=args.yolo, screenshot=args.screenshot, model=args.model)
     else:
         # Interactive mode
-        console.print(f"[bold cyan]KimSystem AI CLI[/bold cyan] - Model: [green]{args.model}[/green] - YOLO: [red]{args.yolo}[/red]")
+        console.print(f"[bold cyan]KimSystem AI CLI[/bold cyan] - YOLO: [red]{args.yolo}[/red]")
         print("Type 'exit' or 'quit' to end session. Type '--screenshot' in your prompt to include a screenshot.")
         while True:
             try:
