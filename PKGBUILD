@@ -1,7 +1,7 @@
 # Maintainer: Master Kim <your-email@example.com>
 pkgname=kimsystemai-git
 _pkgname=kimsystemai
-pkgver=0.1.0.r0.g$(git rev-parse --short HEAD 2>/dev/null || echo "unknown")
+pkgver=0.1.0.r0
 pkgrel=1
 pkgdesc="KimSystem AI CLI: A specialized expert in Arch Linux and Hyprland"
 arch=('any')
@@ -16,7 +16,10 @@ md5sums=('SKIP')
 
 pkgver() {
   cd "$_pkgname"
-  git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+  ( set -o pipefail
+    git describe --long --tags 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+    printf "0.1.0.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  )
 }
 
 build() {
