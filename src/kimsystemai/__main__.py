@@ -6,6 +6,7 @@ import uuid
 import re
 import argparse
 import sys
+import readline
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
