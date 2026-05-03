@@ -1,13 +1,13 @@
 # Maintainer: Master Kim <your-email@example.com>
 pkgname=kimsystemai-git
 _pkgname=kimsystemai
-pkgver=0.1.0.r6.gfb57dfa
+pkgver=0.1.0.r7.g505ec98
 pkgrel=1
 pkgdesc="KimSystem AI CLI: A specialized expert in Arch Linux and Hyprland"
 arch=('any')
 url="https://github.com/eliakimrosil/KimSystemAI"
 license=('MIT')
-depends=('python' 'python-requests' 'grim' 'hyprland' 'mpv')
+depends=('python' 'python-google-genai' 'python-dotenv' 'python-requests' 'grim' 'hyprland' 'mpv')
 makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
 provides=("$_pkgname")
 conflicts=("$_pkgname")
