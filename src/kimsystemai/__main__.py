@@ -169,7 +169,7 @@ def take_screenshot():
         return None
     return None
 
-def process_chat(session_id, user_text, yolo=True, screenshot=False, model="gemini-2.0-flash"):
+def process_chat(session_id, user_text, yolo=True, screenshot=False, model="gemini-2.5-flash"):
     all_histories = load_history()
     session_history = all_histories.get(session_id, [])
     gemini_history = []
@@ -246,7 +246,7 @@ def main():
     parser.add_argument("--no-yolo", action="store_false", dest="yolo", help="Disable YOLO mode")
     parser.add_argument("--screenshot", action="store_true", help="Include a screenshot")
     parser.add_argument("--session", default="cli_default", help="Session ID for chat history")
-    parser.add_argument("--model", default="gemini-2.0-flash", help="Gemini model to use")
+    parser.add_argument("--model", default="gemini-2.5-flash", help="Gemini model to use")
     
     args = parser.parse_args()
     
