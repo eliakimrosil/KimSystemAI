@@ -11,7 +11,7 @@ depends=('python' 'python-google-genai' 'python-dotenv' 'python-requests' 'grim'
 makedepends=('git' 'python-build' 'python-installer' 'python-setuptools' 'python-wheel')
 provides=("$_pkgname")
 conflicts=("$_pkgname")
-source=("git+$url.git")
+source=("$_pkgname::git+$url.git")
 md5sums=('SKIP')
 
 pkgver() {
@@ -28,6 +28,9 @@ package() {
   cd "$_pkgname"
   python -m installer --destdir="$pkgdir" dist/*.whl
   
-  # Install the .env.example as a reference in /usr/share
+  # Install the .env.example as a reference
   install -Dm644 .env.example "$pkgdir/usr/share/$_pkgname/.env.example"
+  
+  # Install the License
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
